@@ -13,7 +13,7 @@ func main() {
 
 	r.HandleFunc("/hello", handlers.HelloHandler)
 	r.HandleFunc("/article", handlers.PostArticleHandler).Methods(http.MethodGet)
-	r.HandleFunc("/article", handlers.ArticleListHandler).Methods(http.MethodGet)
+	r.HandleFunc("/article/list", handlers.ArticleListHandler).Methods(http.MethodGet)
 	r.HandleFunc("/article/{id:[0-9]+}", handlers.ArticleDetailHandler).Methods(http.MethodPost)
 	r.HandleFunc("/article/nice", handlers.PostNiceHandler).Methods(http.MethodPost)
 	r.HandleFunc("/article/comments", handlers.PostCommentHandler).Methods(http.MethodPost)
